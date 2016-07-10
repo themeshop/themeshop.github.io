@@ -1,0 +1,141 @@
+// Typography
+body{
+  @include media('>=tablet') {
+    @include fontsize(13, 17);
+  }
+  @include media('>=desktop') {
+    @include fontsize(14, 18);
+  }
+  
+}
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+.h {
+  font-family: $headings-font-family;
+  font-weight: $light;
+  margin: 0 0 0.5em;
+  color: $headings-color;
+}
+
+h1, .h1 {
+  font-size: $h1-font-size;
+  line-height: 22px;
+  margin: 0 0 15px;
+  @include media('>=tablet') {
+    @include fontsize(29, 33);
+  }
+  @include media('>=desktop') {
+    @include fontsize(35, 40);
+  }
+  @include media('>=widescreen') {
+    @include fontsize(42, 47);
+  }
+}
+
+h2, .h2 {
+  font-size: $h2-font-size;
+  line-height: 24px;
+  margin: 0 0 5px;
+  @include media('>=tablet') {
+    @include fontsize(26, 29);
+    margin: 0 0 10px;
+  }
+  @include media('>=desktop') {
+    @include fontsize(30, 33);
+  }
+  @include media('>=widescreen') {
+    @include fontsize(36, 39);
+    margin: 0 0 16px;
+  }
+}
+
+h3, .h3 {
+  font-size: $h3-font-size;
+  line-height: 18px;
+  margin: 0 0 10px;
+  font-weight: $regular;
+  @include media('>=tablet') {
+    @include fontsize(18, 22);
+  }
+  @include media('>=desktop') {
+    @include fontsize(22, 25);
+  }
+  @include media('>=widescreen') {
+    @include fontsize(25, 28);
+  }
+}
+
+h4, .h4 {
+  font-size: $h4-font-size;
+}
+
+h5, .h5 {
+  font-size: $h5-font-size;
+}
+
+h6, .h6 {
+  font-size: $h6-font-size;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  color: $base-link-color;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+p span{
+  font-weight: 300;
+}
+.btn-group{
+  overflow: hidden;
+  text-align: center;
+  padding: 10px 0;
+  [class^="btn-"], [class*=" btn-"] {
+    margin: 0 5px 5px;
+  }
+  @include media('>=tablet') {
+    padding: 27px 0 10px;
+  }
+  @include media('>=widescreen') {
+    padding: 37px 0 10px;
+  }
+}
+.btn-default, .btn-info{
+  @include font(12, 15, $medium);
+  @include inline(top);
+  border: 0;
+  background: $light-green;
+  color: $white;
+  padding: 10px 12px;
+  text-transform: capitalize;
+  min-width: 110px;
+  @include media('>=tablet') {
+    @include fontsize(14, 17);
+    padding: 14px 15px;
+    min-width: 134px;
+  }
+  @include media('>=widescreen') {
+    @include fontsize(16, 20);
+    padding: 20px 18px;
+    min-width: 160px;
+  }
+  &:hover, &:focus {
+    background: darken($light-green, 10%);
+  }
+}
+.btn-info{
+  background: #959595;
+  &:hover, &:focus {
+    background: darken(#959595, 10%);
+  }
+}

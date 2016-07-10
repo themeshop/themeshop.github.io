@@ -1,0 +1,119 @@
+// forms
+form,
+fieldset {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+input[type='search'],
+input[type='password'],
+input[type='url'],
+// input[type='date'],
+textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  box-shadow: none;
+  padding: $form-element-padding;
+  border: 0;
+  &:focus {
+    border-color: $form-element-focus-border-color;
+  }
+  @include placeholder {
+    color: $placeholder-color;
+  }
+}
+
+select {
+  -webkit-border-radius: 0;
+}
+
+textarea {
+  resize: vertical;
+  vertical-align: top;
+}
+
+button,
+input[type='button'],
+input[type='reset'],
+input[type='file'],
+input[type='submit'] {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  cursor: pointer;
+}
+
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+input[type='search'],
+input[type='password'],
+input[type='url'] {
+  @include font(12, 15, $light);
+  @include size(100%, 35px);
+  background: $white;
+  border: 0;
+  display: block;
+  outline: none;
+  border: 0;
+  padding: 8px 10px;
+  margin: 0 0 10px;
+  border: 2px solid #e0e0e0;
+  color: $gray-lighter;
+  text-transform: capitalize;
+  @include placeholder {
+    color: $gray-lighter;
+    text-transform: capitalize;
+  }
+  @include media('>=desktop') {
+    @include fontsize(14, 17);
+    height: 45px;
+    padding: 12px 15px;
+  }
+  @include media('>=widescreen') {
+    @include fontsize(16, 20);
+    height: 60px;
+    padding: 18px 22px;
+  }
+}
+.form-estimate {
+  @extend %clearfix;
+  max-width: 360px;
+  margin: 0 auto 20px;
+  background: #ececec;
+  height: 35px;
+  @include media('>=widescreen') {
+    height: 45px;
+    max-width: 600px;
+  }
+  .btn-default {
+    @include font(11, 15, $medium);
+    @extend .ellipsis;
+    float: right;
+    width: 150px;
+    padding: 10px;
+    text-transform: capitalize;
+    @include media('>=desktop') {
+      width: 200px;
+      @include fontsize(14, 17);
+      padding: 14px 15px;
+    }
+    @include media('>=widescreen') {
+      width: 230px;
+      @include fontsize(16, 20);
+      padding: 20px 18px;
+    }
+  }
+  input[type='url'],
+  input[type='text']{
+    border-color: #ececec;
+    margin: 0;
+    background: #ececec;
+  }
+  .area {
+    overflow: hidden;
+  }
+}
